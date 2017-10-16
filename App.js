@@ -15,26 +15,24 @@ import {
 } from 'react-native';
 
 const exibeFrase = () => {
-
   var numeroAleatorio = Math.floor(Math.random() * 5);
 
-  var frases = Array();
-  frases[0] = "Você faz suas escolhas, e suas escolhas fazem você.";
-  frases[1] = "Aqueles que falam de você na sua ausência, é porque respeitam a sua presença.";
-  frases[2] = "O melhor sentimento do mundo é ver alguém sorrir e saber que você é o motivo.";
-  frases[3] = "Não adianta acreditar se você não tem coragem de lutar.";
-  frases[4] = "Melhor morrer do que perder a vida";
+  var frases = [];
+  frases[0] = 'Você faz suas escolhas, e suas escolhas fazem você.';
+  frases[1] = 'Aqueles que falam de você na sua ausência, é porque respeitam a sua presença.';
+  frases[2] = 'O melhor sentimento do mundo é ver alguém sorrir e saber que você é o motivo.';
+  frases[3] = 'Não adianta acreditar se você não tem coragem de lutar.';
+  frases[4] = 'Melhor morrer do que perder a vida';
 
   
   Alert.alert(frases[numeroAleatorio]);  
-
-}
+};
 
 export default class App extends Component<{}> {
   render() {
     return (
       <View style={styles.container}>
-        <Image source={require('./imgs/logo.png')}/>
+        <Image source={require('./imgs/logo.png')} />
         <TouchableOpacity onPress={exibeFrase} style={styles.botao}>
           <Text style={styles.textoBotao}>Nova Frase</Text>
         </TouchableOpacity>
